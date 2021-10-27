@@ -29,6 +29,7 @@ dt::after {
     position: absolute;
     top: 8px;
     right: 16px;
+    transition: transform .3s;
 }
 
 dl > div.appear dt::after {
@@ -47,4 +48,16 @@ dd:before {
 
 dl > div.appear dd {
     display: block;
+    animation: .3s dadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
